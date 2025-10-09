@@ -107,7 +107,7 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h4 class="modal-title" id="myModalLabel">
-                        Save GCODE
+                        Guardar GCODE
                     </h4>
                 </div>
                 <div class="modal-body">
@@ -279,7 +279,7 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                                                     </select>
                                             <tr>
                                                 <td><label class="control-label">Units</label>
-                                                <td><select data-bind="value: units"><option>inch<option>mm</select>
+                                                <td><select data-bind="value: units"><option>mm</select>
                                             <tr data-bind="visible: camOp()!='Engrave'">
                                                 <td><label class="control-label">Margin</label>
                                                 <td><input id="opMargin" type="number" step="any" data-bind="value: margin">
@@ -312,7 +312,7 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                             <table class="table">
                                 <tr>
                                     <td><label for="tabsUnits" class="control-label">Units</label>
-                                    <td><select id="tabsUnits" data-bind="value: units"><option>inch<option>mm</select>
+                                    <td><select id="tabsUnits" data-bind="value: units"><option>mm</select>
                                 <tr>
                                     <td><label for="tabsMaxCutDepth" class="control-label">Max Cut Depth</label>
                                     <td><input id="tabsMaxCutDepth" type="number" step="any" data-bind="value: maxCutDepth">
@@ -344,7 +344,7 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                             <table class="table">
                                 <tr>
                                     <td><label for="toolUnits" class="control-label">Units</label>
-                                    <td><select id="toolUnits" data-bind="value: units"><option>inch<option>mm</select>
+                                    <td><select id="toolUnits" data-bind="value: units"><option>mm</select>
                                 <tr>
                                     <td><label for="toolDiameter" class="control-label">Diameter</label>
                                     <td><span data-bind="text: units"></span>
@@ -466,13 +466,9 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                                     <td>
                                     <td><a href="#" onclick="makeAllSameUnit('mm')">Make all mm</a>
                                 <tr>
-                                    <td>
-                                    <td><a href="#" onclick="makeAllSameUnit('inch')">Make all inch</a>
-                                <tr>
                                     <td><label for="selectMatUnits">Units</label>
                                     <td>
                                         <select id="selectMatUnits" data-bind="value: matUnits">
-                                            <option>inch</option>
                                             <option>mm</option>
                                         </select>
                                 <tr>
@@ -536,7 +532,7 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                                         <td colspan="2"><a id="gcodeZeroCenter" href="#" data-bind="click: zeroCenter">Zero center</a>
                                     <tr>
                                         <td><label for="gcodeReturn00">Return to 0,0 at end</label>
-                                        <td><input id="gcodeReturn00" type="checkbox" data-bind="checked: returnTo00" />
+                                        <td><input id="gcodeReturn00" type="checkbox" data-bind="checked: returnTo00" checked/>
                                     <tr>
                                         <td><label for="gcodeOffsetX">X Offset</label>
                                         <td><span data-bind="text: units" />

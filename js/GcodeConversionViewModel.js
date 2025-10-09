@@ -26,7 +26,7 @@ function GcodeConversionViewModel(options, miscViewModel, materialViewModel, too
     self.gcodeFilename = ko.observable("gcode.gcode");
     self.offsetX = ko.observable(0);
     self.offsetY = ko.observable(0);
-    self.returnTo00 = ko.observable(false);
+    self.returnTo00 = ko.observable(true);
 
     self.unitConverter.add(self.offsetX);
     self.unitConverter.add(self.offsetY);
@@ -116,6 +116,7 @@ function GcodeConversionViewModel(options, miscViewModel, materialViewModel, too
             gcode += "G21         ; Set units to mm\r\n";
         gcode += "G90         ; Absolute positioning\r\n";
         gcode += "G1 Z" + safeZ + " F" + rapidRate + "      ; Move to clearance level\r\n"
+        gcode += "M3 S800       ; Arranco el motor"
 
         for (var opIndex = 0; opIndex < ops.length; ++opIndex) {
             var op = ops[opIndex];
