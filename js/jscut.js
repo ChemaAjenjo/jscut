@@ -306,54 +306,55 @@ function popoverHover(obj, placement, content) {
     });
 }
 
-popoverHover('#pxPerInch', "bottom", "SVG editors use different scales from each other; set this to allow sizes come out correctly.<br><br><table><tr><td>Inkscape 0.9x:<td>96<tr><td>Inkscape 0.4x:<td>90<tr><td>Adobe Illustrator:<td>72<tr><td>CorelDRAW:<td>96</table>");
+popoverHover('#pxPerInch', "bottom", "Los editores SVG usan diferentes escalas entre sí; ajusta esto para que los tamaños salgan correctamente.<br><br><table><tr><td>Inkscape 0.9x:<td>96<tr><td>Inkscape 0.4x:<td>90<tr><td>Adobe Illustrator:<td>72<tr><td>CorelDRAW:<td>96</table>");
 
-popoverHover('#tabsMaxCutDepth', "right", "Maximum depth operations may cut when they pass over tabs");
+popoverHover('#tabsMaxCutDepth', "right", "Profundidad máxima a la que las operaciones pueden cortar cuando pasan sobre las pestañas (tabs).");
 
-popoverHover('#toolDiameter', "right", "Diameter of tool. V Pocket ignores this. Simulate GCODE also ignores Diameter if Angle < 180.");
-popoverHover('#toolAngle', "right", "Angle of V cutter. 180 for normal (flat bottom) tools. V Pocket is the only operation which obeys this. Simulate GCODE always obeys it.");
-popoverHover('#toolPassDepth', "right", "Maximum depth the tool should plunge each pass. Use a smaller pass depth for harder materials and better quality.");
-popoverHover('#toolStepOver', "right", "What fraction of the tool diameter the tool should step over each time around a loop. Smaller values produce better cuts and reduce tool wear, but take longer to complete.");
-popoverHover('#toolRapidRate', "right", "The speed the tool moves while not cutting");
-popoverHover('#toolPlungeRate', "right", "The speed the tool plunges downwards into the material");
-popoverHover('#toolCutRate', "right", "The speed the tool moves horizontally during cutting");
+popoverHover('#toolDiameter', "right", "Diámetro de la herramienta. El V Pocket ignora esto. La simulación de GCODE también ignora el diámetro si el ángulo es < 180.");
+popoverHover('#toolAngle', "right", "Ángulo de la fresa en V. 180 para herramientas normales (fondo plano). V Pocket es la única operación que obedece esto. La simulación de GCODE siempre lo respeta.");
+popoverHover('#toolPassDepth', "right", "Profundidad máxima que la herramienta debe penetrar en cada pasada. Usa una profundidad menor para materiales más duros y mejor calidad.");
+popoverHover('#toolStepOver', "right", "Fracción del diámetro de la herramienta que debe superponerse en cada vuelta del recorrido. Valores menores producen cortes de mejor calidad y reducen el desgaste, pero tardan más.");
+popoverHover('#toolRapidRate', "right", "Velocidad a la que la herramienta se mueve cuando no está cortando.");
+popoverHover('#toolPlungeRate', "right", "Velocidad a la que la herramienta desciende hacia el material.");
+popoverHover('#toolCutRate', "right", "Velocidad a la que la herramienta se mueve horizontalmente durante el corte.");
 
-popoverHover('#inputMatThickness', "top", "How thick is the material");
-popoverHover('#selectMatZOrigin', "top", "What is considered the 0 Z position");
-popoverHover('#inputMatClearance', "top", "How high the tool moves over the material. Increase this when using clamps or screws to fasten the material.");
+popoverHover('#inputMatThickness', "top", "Qué tan grueso es el material.");
+popoverHover('#selectMatZOrigin', "top", "Qué posición se considera el origen Z = 0.");
+popoverHover('#inputMatClearance', "top", "Qué tan alto se mueve la herramienta por encima del material. Aumenta este valor cuando uses abrazaderas o tornillos para sujetar el material.");
 
-popoverHover('#inputSelMinNumSegments', "top", "Minimum number of line segments to convert a curve to. jscut does this conversion when you select an object (it becomes blue).");
-popoverHover('#inputSelMinSegmentLength', "top", "Minimum length of each line segment when converting curves. jscut does this conversion when you select an object (it becomes blue).");
+popoverHover('#inputSelMinNumSegments', "top", "Número mínimo de segmentos de línea para convertir una curva. jscut hace esta conversión cuando seleccionas un objeto (se vuelve azul).");
+popoverHover('#inputSelMinSegmentLength', "top", "Longitud mínima de cada segmento de línea al convertir curvas. jscut hace esta conversión cuando seleccionas un objeto (se vuelve azul).");
 
-popoverHover('#gcodeZeroLowerLeft', "top", "Changes the X and Y Offset values so that 0,0 is at the lower-left corner of all tool paths.");
-popoverHover('#gcodeZeroCenter', "top", "Changes the X and Y Offset values so that 0,0 is at the center of all tool paths.");
-popoverHover('#gcodeReturn00', "top", "Move the tool to 0,0 after the last operation.");
-popoverHover('#gcodeOffsetX', "top", "Amount to add to gcode X coordinates");
-popoverHover('#gcodeOffsetY', "top", "Amount to add to gcode Y coordinates");
-popoverHover('#gcodeMinX', "top", "Minimum X coordinate in gcode. If this is out of range of your machine then adjust X Offset.");
-popoverHover('#gcodeMaxX', "top", "Maximum X coordinate in gcode. If this is out of range of your machine then adjust X Offset.");
-popoverHover('#gcodeMinY', "top", "Minimum Y coordinate in gcode. If this is out of range of your machine then adjust Y Offset.");
-popoverHover('#gcodeMaxY', "top", "Maximum Y coordinate in gcode. If this is out of range of your machine then adjust Y Offset.");
+popoverHover('#gcodeZeroLowerLeft', "top", "Cambia los valores de desplazamiento X e Y para que 0,0 esté en la esquina inferior izquierda de todas las trayectorias.");
+popoverHover('#gcodeZeroCenter', "top", "Cambia los valores de desplazamiento X e Y para que 0,0 esté en el centro de todas las trayectorias.");
+popoverHover('#gcodeReturn00', "top", "Mover la herramienta a 0,0 después de la última operación.");
+popoverHover('#gcodeOffsetX', "top", "Cantidad que se añadirá a las coordenadas X del gcode.");
+popoverHover('#gcodeOffsetY', "top", "Cantidad que se añadirá a las coordenadas Y del gcode.");
+popoverHover('#gcodeMinX', "top", "Coordenada X mínima en el gcode. Si está fuera del rango de tu máquina, ajusta el desplazamiento X.");
+popoverHover('#gcodeMaxX', "top", "Coordenada X máxima en el gcode. Si está fuera del rango de tu máquina, ajusta el desplazamiento X.");
+popoverHover('#gcodeMinY', "top", "Coordenada Y mínima en el gcode. Si está fuera del rango de tu máquina, ajusta el desplazamiento Y.");
+popoverHover('#gcodeMaxY', "top", "Coordenada Y máxima en el gcode. Si está fuera del rango de tu máquina, ajusta el desplazamiento Y.");
 
 var operationPopovers = {
-    opEnabled: ['top', 'Whether this operation is enabled'],
-    opOperation: ['top', 'What operation type to perform'],
-    opGenerate: ['top', 'Generate toolpath for operation'],
-    opShowDetail: ['top', 'Show additional detail'],
-    opName: ['right', 'Name used in gcode comments'],
-    opRamp: ['right', 'Ramp the cutter in gradually instead of plunging straight down'],
-    opCombine: ['right', 'How to combine multiple objects into this operation'],
-    opDirection: ['right', 'What direction the cutter should travel'],
-    opCutDepth: ['top', 'How deep this operation should cut in total'],
-    opVMaxDepth: ['right', "Maximum depth this operation should cut. <p class='bg-danger'>not implemented yet; this is ignored.</p>"],
-    opMargin: ['right', 'Positive: how much material to leave uncut.<br><br>Negative: how much extra material to cut'],
-    opWidth: ['right', 'How wide a path to cut. If this is less than the cutter width then it uses the cutter width.'],
+    opEnabled: ['top', 'Si esta operación está habilitada'],
+    opOperation: ['top', 'Qué tipo de operación realizar'],
+    opGenerate: ['top', 'Generar la trayectoria (toolpath) para la operación'],
+    opShowDetail: ['top', 'Mostrar detalles adicionales'],
+    opName: ['right', 'Nombre usado en los comentarios del gcode'],
+    opRamp: ['right', 'Hacer que la herramienta entre gradualmente en lugar de descender verticalmente'],
+    opCombine: ['right', 'Cómo combinar múltiples objetos en esta operación'],
+    opDirection: ['right', 'En qué dirección debe moverse la herramienta'],
+    opCutDepth: ['top', 'Qué tan profundo debe cortar esta operación en total'],
+    opVMaxDepth: ['right', "Profundidad máxima que debe cortar esta operación. <p class='bg-danger'>todavía no implementado; se ignora.</p>"],
+    opMargin: ['right', 'Positivo: cuánto material dejar sin cortar.<br><br>Negativo: cuánto material extra cortar'],
+    opWidth: ['right', 'Qué tan ancho debe ser el recorrido de corte. Si es menor que el ancho de la herramienta, se usará el ancho de la herramienta.'],
 }
 
 var tabPopovers = {
-    tabEnabled: ['top', 'Whether this tab is enabled'],
-    tabMargin: ['top', 'Positive: how much to expand tab.<br><br>Negative: how much to shrink tab.'],
+    tabEnabled: ['top', 'Si esta pestaña (tab) está habilitada'],
+    tabMargin: ['top', 'Positivo: cuánto expandir la pestaña.<br><br>Negativo: cuánto reducir la pestaña.'],
 }
+
 
 function hookupOperationPopovers(nodes) {
     "use strict";
