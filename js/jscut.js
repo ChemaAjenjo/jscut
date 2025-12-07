@@ -318,7 +318,7 @@ popoverHover('#toolRapidRate', "right", "Velocidad a la que la herramienta se mu
 popoverHover('#toolPlungeRate', "right", "Velocidad a la que la herramienta desciende hacia el material.");
 popoverHover('#toolCutRate', "right", "Velocidad a la que la herramienta se mueve horizontalmente durante el corte.");
 
-popoverHover('#inputMatThickness', "top", "Qué tan grueso es el material.");
+popoverHover('#inputMatThickness', "top", "Grueso es el material.");
 popoverHover('#selectMatZOrigin', "top", "Qué posición se considera el origen Z = 0.");
 popoverHover('#inputMatClearance', "top", "Qué tan alto se mueve la herramienta por encima del material. Aumenta este valor cuando uses abrazaderas o tornillos para sujetar el material.");
 
