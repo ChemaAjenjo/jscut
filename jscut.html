@@ -39,7 +39,7 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h4 class="modal-title" id="myModalLabel">
-                        Save Settings
+                        Guardar configuración
                     </h4>
                 </div>
                 <div class="modal-body">
@@ -47,9 +47,9 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                     <br /><br />Have any default settings? Name them "preload.jscut" and click "In Browser". jscut will automatically load this each time it starts.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="saveSettingsLocalStorage(function () { $('#save-settings-modal').modal('hide') })">In Browser</button>
-                    <button type="button" class="btn btn-primary" onclick="saveSettingsLocalFile(function () { $('#save-settings-modal').modal('hide') })">Local file</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="saveSettingsLocalStorage(function () { $('#save-settings-modal').modal('hide') })">Explorador</button>
+                    <button type="button" class="btn btn-primary" onclick="saveSettingsLocalFile(function () { $('#save-settings-modal').modal('hide') })">Cargar fichero</button>
                     <button type="button" class="btn btn-primary" onclick="$('#save-settings-modal').modal('hide');$('#save-gist-warning').modal('show')">Gist</button>
                     <button type="button" class="btn btn-primary" id="saveSettingsGoogle1" data-bind="visible: enableGoogleDrive" onclick="saveSettingsGoogle(function () { $('#save-settings-modal').modal('hide') })">Google Drive</button>
                 </div>
@@ -64,16 +64,16 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h4 class="modal-title" id="myModalLabel">
-                        Load Settings
+                        Cargar configuración
                     </h4>
                 </div>
                 <div class="modal-body">
                   <p>Select settings:<select id="selectSettings" data-bind="options: localStorageSettings, value: loadLocalStorageFilename"></select></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="$('#load-local-storage-settings-modal').modal('hide'); $('#delete-local-storage-settings-modal').modal('show')">Delete</button>
-                    <button type="button" class="btn btn-primary" onclick="loadSettingsLocalStorage(function () { $('#load-local-storage-settings-modal').modal('hide') })">Load</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="$('#load-local-storage-settings-modal').modal('hide'); $('#delete-local-storage-settings-modal').modal('show')">Borrar</button>
+                    <button type="button" class="btn btn-primary" onclick="loadSettingsLocalStorage(function () { $('#load-local-storage-settings-modal').modal('hide') })">Cargar</button>
                 </div>
             </div>
         </div>
@@ -86,15 +86,15 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h4 class="modal-title" id="myModalLabel">
-                        Delete Settings
+                        Borrar Configuracion
                     </h4>
                 </div>
                 <div class="modal-body">
                     <p>Delete "<b><span data-bind="text: loadLocalStorageFilename"></span></b>"?</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="deleteSettingsLocalStorage()">Delete</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="deleteSettingsLocalStorage()">Borrar</button>
                 </div>
             </div>
         </div>
@@ -114,8 +114,8 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                     <input id="FileGetGcode1" data-bind="value: gcodeFilename">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="saveGcodeLocalFile(function () { $('#save-gcode-modal').modal('hide') })">Local file</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="saveGcodeLocalFile(function () { $('#save-gcode-modal').modal('hide') })">Local</button>
                     <button type="button" class="btn btn-primary" id="saveGcodeGoogle1" data-bind="visible: enableGoogleDrive" onclick="saveGcodeGoogle(function () { $('#save-gcode-modal').modal('hide') })">Google Drive</button>
                     <button type="button" class="btn btn-primary" onclick="chiliSaveGcode()">ChiliPeppr</button>
                 </div>
@@ -130,11 +130,11 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h4 class="modal-title" id="myModalLabel">
-                        Save GCODE
+                        Guardar GCODE
                     </h4>
                 </div>
                 <div class="modal-body">
-                    gcode saved to chilipeppr.com.
+                    gcode guardado en chilipeppr.com.
                 </div>
                 <div class="modal-footer">
                     <a id="LaunchChiliPeppr" class="btn btn-primary" href="#" target="_blank" data-bind="attr:{href:launchChiliUrl()}">Launch ChiliPeppr TinyG</a>
@@ -204,18 +204,18 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                 <div class="panel panel-default" id="Operations">
                     <div class="panel-heading">
                         <h3 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOperations">Operations</a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOperations">Operaciones</a>
                         </h3>
                     </div>
                     <div id="collapseOperations" class="panel-collapse collapse in">
                         <div class="panel-body">
                             <table class="table">
                                 <tr>
-                                    <td><label for="pxPerInch">px per inch</label>
+                                    <td><label for="pxPerInch">px por pulgada</label>
                                     <td><input type="number" step="any" id="pxPerInch" data-bind="value: svgViewModel.pxPerInch">
                             </table>
                             <div style="display: inline-block">
-                                <button id="createOperationButton" class="btn btn-default" data-bind="click: addOperation, enable:selectionViewModel.selNumSelected()>0">Create Operation</button>
+                                <button id="createOperationButton" class="btn btn-default" data-bind="click: addOperation, enable:selectionViewModel.selNumSelected()>0">Crear Operación</button>
                             </div>
                         </div>
                         <div style="display:table">
@@ -233,8 +233,8 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                                         </select>
                                     </div>
                                     <div style="display: table-cell; width: 1px; padding-right: 5px"><input id="opCutDepth" class="number" type="number" step="any" data-bind="visible: camOp()!='V Pocket', value: cutDepth"></div>
-                                    <div style="display: table-cell; width: 1px; padding-right: 5px"><label data-bind="visible: camOp()!='V Pocket'" class="control-label">Deep</label></div>
-                                    <div style="display: table-cell; width: 1000px; padding-right: 5px; text-align:right"><a id="opGenerate" href="#" data-bind="click: generateToolPath">Generate</a></div>
+                                    <div style="display: table-cell; width: 1px; padding-right: 5px"><label data-bind="visible: camOp()!='V Pocket'" class="control-label">Profundidad</label></div>
+                                    <div style="display: table-cell; width: 1000px; padding-right: 5px; text-align:right"><a id="opGenerate" href="#" data-bind="click: generateToolPath">Generar</a></div>
                                     </div>
                                 <div style="display:table-row" class="alert alert-danger" data-bind="visible: enabled() && camOp()=='V Pocket' && !miscViewModel.loadedCamCpp() && miscViewModel.camCppError().length == 0">
                                     <div style="display: table-cell"></div>
@@ -249,14 +249,14 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                                 <div style="display:table-row" class="alert alert-danger" data-bind="visible: enabled() && camOp()=='V Pocket' && toolModel.angle() == 180">
                                     <div style="display: table-cell"></div>
                                     <div style="display: table-cell"></div>
-                                    <div style="display: table-cell">Set Tool Angle. This operation will not work until tool angle is set.</div>
+                                    <div style="display: table-cell">Establecer el ángulo de la herramienta. Esta operación no funcionará hasta que se establezca el ángulo de la herramienta.</div>
                                 </div>
                                 <div style="display:table-row" data-bind="visible: showDetail">
                                     <div style="display: table-cell; width: 20px"></div>
                                     <div style="display: table-cell">
                                         <table class="table">
                                             <tr>
-                                                <td><label class="control-label">Name</label>
+                                                <td><label class="control-label">Nombre</label>
                                                 <td><input id="opName" data-bind="value: name">
                                             <tr data-bind="visible: camOp()!='V Pocket'">
                                                 <td><label class="control-label">Ramp Plunge</label>
@@ -415,10 +415,10 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                 <div class="tabbable" id="tabs-139888">
                     <ul class="nav nav-tabs">
                         <li class="active">
-                            <a href="#svgPanel" data-toggle="tab">Edit Toolpaths</a>
+                            <a href="#svgPanel" data-toggle="tab">Editar trayectorias</a>
                         </li>
                         <li>
-                            <a href="#simulatePanel" data-toggle="tab">Simulate GCODE</a>
+                            <a href="#simulatePanel" data-toggle="tab">Simular GCODE</a>
                         </li>
                     </ul>
                     <div class="tab-content">
@@ -464,7 +464,7 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                             <table class="table">
                                 <tr>
                                     <td>
-                                    <td><a href="#" onclick="makeAllSameUnit('mm')">Make all mm</a>
+                                    <td><a href="#" onclick="makeAllSameUnit('mm')">Pasar todo a mm</a>
                                 <tr>
                                     <td><label for="selectMatUnits">Units</label>
                                     <td>
@@ -526,12 +526,12 @@ along with jscut.  If not, see <http://www.gnu.org/licenses/>.
                                         <td><select data-bind="value: units"><option>inch<option>mm</select>
                                     <tr>
                                         <td>
-                                        <td colspan="2"><a id="gcodeZeroLowerLeft" href="#" data-bind="click: zeroLowerLeft">Zero lower left</a>
+                                        <td colspan="2"><a id="gcodeZeroLowerLeft" href="#" data-bind="click: zeroLowerLeft">Cero abajo a la izquierda</a>
                                     <tr>
                                         <td>
-                                        <td colspan="2"><a id="gcodeZeroCenter" href="#" data-bind="click: zeroCenter">Zero center</a>
+                                        <td colspan="2"><a id="gcodeZeroCenter" href="#" data-bind="click: zeroCenter">Cero centrado</a>
                                     <tr>
-                                        <td><label for="gcodeReturn00">Return to 0,0 at end</label>
+                                        <td><label for="gcodeReturn00">Volver a 0,0 al terminar</label>
                                         <td><input id="gcodeReturn00" type="checkbox" data-bind="checked: returnTo00" checked/>
                                     <tr>
                                         <td><label for="gcodeOffsetX">X Offset</label>
